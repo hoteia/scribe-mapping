@@ -1,9 +1,9 @@
-package fr.hoteia.tools.scribe.mapping.oauth.json.bean.windowslive;
+package org.hoteia.tools.scribe.mapping.oauth.windowslive.json.pojo;
 
 import org.codehaus.jackson.annotate.JsonAnySetter;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
+import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 
-import fr.hoteia.tools.scribe.mapping.oauth.json.bean.AbstractJsonPojo;
 
 /**
 *

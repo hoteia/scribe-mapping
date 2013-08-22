@@ -7,7 +7,7 @@
  * http://www.hoteia.com - http://twitter.com/hoteia - contact@hoteia.com
  *
  */
-package fr.hoteia.tools.scribe.mapping.oauth.json.bean;
+package org.hoteia.tools.scribe.mapping.oauth.common.json.pojo;
 
 import org.codehaus.jackson.annotate.JsonAnySetter;
 

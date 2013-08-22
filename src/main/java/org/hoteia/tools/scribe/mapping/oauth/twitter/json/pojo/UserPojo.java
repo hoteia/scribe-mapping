@@ -1,4 +1,4 @@
-package fr.hoteia.tools.scribe.mapping.oauth.json.bean.windowslive;
+package org.hoteia.tools.scribe.mapping.oauth.twitter.json.pojo;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,8 +6,8 @@ import java.util.List;
 import org.codehaus.jackson.annotate.JsonAnySetter;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
+import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 
-import fr.hoteia.tools.scribe.mapping.oauth.json.bean.AbstractJsonPojo;
 
 /**
 *
