@@ -1,30 +1,32 @@
 package org.hoteia.tools.scribe.mapping.oauth.twitter.json.pojo;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.codehaus.jackson.annotate.JsonAnySetter;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 
-
 /**
 *
 * <p>
-* <a href="EmployerPojo.java.html"><i>View Source</i></a>
+* <a href="UrlPojo.java.html"><i>View Source</i></a>
 * </p>
 *
 * @author Denis Gosset <a href="http://www.hoteia.com"><i>Hoteia.com</i></a>
 * 
 */
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class EmployerPojo extends AbstractJsonPojo {
+public class UrlPojo extends AbstractJsonPojo {
 
-	protected String name;
+	protected List<UrlsPojo> urls = new ArrayList<UrlsPojo>();
 	
-	public String getName() {
-    	return name;
+	public List<UrlsPojo> getUrls() {
+	    return urls;
     }
-
-	public void setName(String name) {
-    	this.name = name;
+	
+	public void setUrls(List<UrlsPojo> urls) {
+	    this.urls = urls;
     }
 
 	@JsonAnySetter

@@ -1,13 +1,9 @@
 package org.hoteia.tools.scribe.mapping.oauth.twitter.json.pojo;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.codehaus.jackson.annotate.JsonAnySetter;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
-
 
 /**
 *
@@ -21,44 +17,130 @@ import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class UserPojo extends AbstractJsonPojo {
 
-	protected String id;
+	protected long id;
+	
+	@JsonProperty("id_str")
+	protected String idStr;
 	
 	protected String name;
-	
-	@JsonProperty("first_name")
-	protected String firstName;
-	
-	@JsonProperty("last_name")
-	protected String lastName;
 
-	@JsonProperty("birth_day")
-	protected String birthDay;
+	@JsonProperty("screen_name")
+	protected String screen_name;
 
-	@JsonProperty("birth_month")
-	protected String birthMonth;
+	protected String location;
 
-	@JsonProperty("birth_year")
-	protected String birthYear;
+	protected String description;
 
-	protected List<WorkPojo> work = new ArrayList<WorkPojo>();
-
-	protected EmailPojo emails = new EmailPojo();
-
-	protected String link;
+	protected String url;
 	
-	protected String gender;
+	@JsonProperty("contributors_enabled")
+	protected boolean contributorsEnabled;
 	
-	protected String locale;
+	@JsonProperty("is_translator")
+	protected boolean isTranslator;
 	
-	@JsonProperty("updated_time")
-	protected String updatedTime;
+	@JsonProperty("protected")
+	protected boolean protectedUser;
 	
-	public String getId() {
+	@JsonProperty("followers_count")
+	protected int followersCount;
+	
+	@JsonProperty("friends_count")
+	protected int friendsCount;
+	
+	@JsonProperty("listed_count")
+	protected int listedCount;
+	
+	@JsonProperty("created_at")
+	protected boolean createdAt;
+	
+	@JsonProperty("favourites_count")
+	protected int favouritesCount;
+	
+	@JsonProperty("utc_offset")
+	protected int utcOffset;
+	
+	@JsonProperty("time_zone")
+	protected String timeZone;
+	
+	@JsonProperty("geo_enabled")
+	protected boolean geoEnabled;
+	
+	@JsonProperty("verified")
+	protected boolean verified;
+	
+	@JsonProperty("statuses_count")
+	protected int statusesCount;
+	
+	@JsonProperty("lang")
+	protected String lang;
+	
+	@JsonProperty("profile_background_color")
+	protected String profileBackgroundColor;
+	
+	@JsonProperty("profile_background_image_url")
+	protected String profileBackgroundImageUrl;
+	
+	@JsonProperty("profile_background_image_url_https")
+	protected String profileBackgroundImageUrlHttps;
+	
+	@JsonProperty("profile_background_tile")
+	protected boolean profileBackgroundTile;
+	
+	@JsonProperty("profile_image_url")
+	protected String profileImageUrl;
+	
+	@JsonProperty("profile_image_url_https")
+	protected String profileImageUrlHttps;
+	
+	@JsonProperty("profile_link_color")
+	protected String profileLinkColor;
+	
+	@JsonProperty("profile_sidebar_border_color")
+	protected String profileSidebarBorderColor;
+	
+	@JsonProperty("profile_sidebar_fill_color")
+	protected String profileSidebarFillColor;
+	
+	@JsonProperty("profile_text_color")
+	protected String profileTextColor;
+	
+	@JsonProperty("profile_use_background_image")
+	protected boolean profileUseBackgroundImage;
+	
+	@JsonProperty("default_profile")
+	protected boolean defaultProfile;
+	
+	@JsonProperty("default_profile_image")
+	protected boolean defaultProfileImage;
+	
+	@JsonProperty("following")
+	protected boolean following;
+	
+	@JsonProperty("follow_request_sent")
+	protected boolean followRequestSent;
+	
+	@JsonProperty("notifications")
+	protected boolean notifications;
+	
+	protected UserEntitiesPojo entities = new UserEntitiesPojo();
+
+	protected StatusPojo status = new StatusPojo();
+
+	public long getId() {
     	return id;
     }
 
-	public void setId(String id) {
+	public void setId(long id) {
     	this.id = id;
+    }
+
+	public String getIdStr() {
+    	return idStr;
+    }
+
+	public void setIdStr(String idStr) {
+    	this.idStr = idStr;
     }
 
 	public String getName() {
@@ -69,92 +151,292 @@ public class UserPojo extends AbstractJsonPojo {
     	this.name = name;
     }
 
-	public String getFirstName() {
-    	return firstName;
+	public String getScreen_name() {
+    	return screen_name;
     }
 
-	public void setFirstName(String firstName) {
-    	this.firstName = firstName;
+	public void setScreen_name(String screen_name) {
+    	this.screen_name = screen_name;
     }
 
-	public String getLastName() {
-    	return lastName;
+	public String getLocation() {
+    	return location;
     }
 
-	public void setLastName(String lastName) {
-    	this.lastName = lastName;
-    }
-	
-	public String getBirthDay() {
-    	return birthDay;
+	public void setLocation(String location) {
+    	this.location = location;
     }
 
-	public void setBirthDay(String birthDay) {
-    	this.birthDay = birthDay;
+	public String getDescription() {
+    	return description;
     }
 
-	public String getBirthMonth() {
-    	return birthMonth;
+	public void setDescription(String description) {
+    	this.description = description;
     }
 
-	public void setBirthMonth(String birthMonth) {
-    	this.birthMonth = birthMonth;
+	public String getUrl() {
+    	return url;
     }
 
-	public String getBirthYear() {
-    	return birthYear;
+	public void setUrl(String url) {
+    	this.url = url;
     }
 
-	public void setBirthYear(String birthYear) {
-    	this.birthYear = birthYear;
-    }
-	
-	public List<WorkPojo> getWork() {
-	    return work;
-    }
-	
-	public void setWork(List<WorkPojo> work) {
-	    this.work = work;
-    }
-	
-	public EmailPojo getEmails() {
-	    return emails;
-    }
-	
-	public void setEmails(EmailPojo emails) {
-	    this.emails = emails;
+	public boolean isContributorsEnabled() {
+    	return contributorsEnabled;
     }
 
-	public String getLink() {
-    	return link;
+	public void setContributorsEnabled(boolean contributorsEnabled) {
+    	this.contributorsEnabled = contributorsEnabled;
     }
 
-	public void setLink(String link) {
-    	this.link = link;
+	public boolean isTranslator() {
+    	return isTranslator;
     }
 
-	public String getGender() {
-    	return gender;
+	public void setTranslator(boolean isTranslator) {
+    	this.isTranslator = isTranslator;
     }
 
-	public void setGender(String gender) {
-    	this.gender = gender;
+	public boolean isProtectedUser() {
+    	return protectedUser;
     }
 
-	public String getLocale() {
-    	return locale;
+	public void setProtectedUser(boolean protectedUser) {
+    	this.protectedUser = protectedUser;
     }
 
-	public void setLocale(String locale) {
-    	this.locale = locale;
+	public int getFollowersCount() {
+    	return followersCount;
     }
 
-	public String getUpdatedTime() {
-    	return updatedTime;
+	public void setFollowersCount(int followersCount) {
+    	this.followersCount = followersCount;
     }
 
-	public void setUpdatedTime(String updatedTime) {
-    	this.updatedTime = updatedTime;
+	public int getFriendsCount() {
+    	return friendsCount;
+    }
+
+	public void setFriendsCount(int friendsCount) {
+    	this.friendsCount = friendsCount;
+    }
+
+	public int getListedCount() {
+    	return listedCount;
+    }
+
+	public void setListedCount(int listedCount) {
+    	this.listedCount = listedCount;
+    }
+
+	public boolean isCreatedAt() {
+    	return createdAt;
+    }
+
+	public void setCreatedAt(boolean createdAt) {
+    	this.createdAt = createdAt;
+    }
+
+	public int getFavouritesCount() {
+    	return favouritesCount;
+    }
+
+	public void setFavouritesCount(int favouritesCount) {
+    	this.favouritesCount = favouritesCount;
+    }
+
+	public int getUtcOffset() {
+    	return utcOffset;
+    }
+
+	public void setUtcOffset(int utcOffset) {
+    	this.utcOffset = utcOffset;
+    }
+
+	public String getTimeZone() {
+    	return timeZone;
+    }
+
+	public void setTimeZone(String timeZone) {
+    	this.timeZone = timeZone;
+    }
+
+	public boolean isGeoEnabled() {
+    	return geoEnabled;
+    }
+
+	public void setGeoEnabled(boolean geoEnabled) {
+    	this.geoEnabled = geoEnabled;
+    }
+
+	public boolean isVerified() {
+    	return verified;
+    }
+
+	public void setVerified(boolean verified) {
+    	this.verified = verified;
+    }
+
+	public int getStatusesCount() {
+    	return statusesCount;
+    }
+
+	public void setStatusesCount(int statusesCount) {
+    	this.statusesCount = statusesCount;
+    }
+
+	public String getLang() {
+    	return lang;
+    }
+
+	public void setLang(String lang) {
+    	this.lang = lang;
+    }
+
+	public String getProfileBackgroundColor() {
+    	return profileBackgroundColor;
+    }
+
+	public void setProfileBackgroundColor(String profileBackgroundColor) {
+    	this.profileBackgroundColor = profileBackgroundColor;
+    }
+
+	public String getProfileBackgroundImageUrl() {
+    	return profileBackgroundImageUrl;
+    }
+
+	public void setProfileBackgroundImageUrl(String profileBackgroundImageUrl) {
+    	this.profileBackgroundImageUrl = profileBackgroundImageUrl;
+    }
+
+	public String getProfileBackgroundImageUrlHttps() {
+    	return profileBackgroundImageUrlHttps;
+    }
+
+	public void setProfileBackgroundImageUrlHttps(String profileBackgroundImageUrlHttps) {
+    	this.profileBackgroundImageUrlHttps = profileBackgroundImageUrlHttps;
+    }
+
+	public boolean isProfileBackgroundTile() {
+    	return profileBackgroundTile;
+    }
+
+	public void setProfileBackgroundTile(boolean profileBackgroundTile) {
+    	this.profileBackgroundTile = profileBackgroundTile;
+    }
+
+	public String getProfileImageUrl() {
+    	return profileImageUrl;
+    }
+
+	public void setProfileImageUrl(String profileImageUrl) {
+    	this.profileImageUrl = profileImageUrl;
+    }
+
+	public String getProfileImageUrlHttps() {
+    	return profileImageUrlHttps;
+    }
+
+	public void setProfileImageUrlHttps(String profileImageUrlHttps) {
+    	this.profileImageUrlHttps = profileImageUrlHttps;
+    }
+
+	public String getProfileLinkColor() {
+    	return profileLinkColor;
+    }
+
+	public void setProfileLinkColor(String profileLinkColor) {
+    	this.profileLinkColor = profileLinkColor;
+    }
+
+	public String getProfileSidebarBorderColor() {
+    	return profileSidebarBorderColor;
+    }
+
+	public void setProfileSidebarBorderColor(String profileSidebarBorderColor) {
+    	this.profileSidebarBorderColor = profileSidebarBorderColor;
+    }
+
+	public String getProfileSidebarFillColor() {
+    	return profileSidebarFillColor;
+    }
+
+	public void setProfileSidebarFillColor(String profileSidebarFillColor) {
+    	this.profileSidebarFillColor = profileSidebarFillColor;
+    }
+
+	public String getProfileTextColor() {
+    	return profileTextColor;
+    }
+
+	public void setProfileTextColor(String profileTextColor) {
+    	this.profileTextColor = profileTextColor;
+    }
+
+	public boolean isProfileUseBackgroundImage() {
+    	return profileUseBackgroundImage;
+    }
+
+	public void setProfileUseBackgroundImage(boolean profileUseBackgroundImage) {
+    	this.profileUseBackgroundImage = profileUseBackgroundImage;
+    }
+
+	public boolean isDefaultProfile() {
+    	return defaultProfile;
+    }
+
+	public void setDefaultProfile(boolean defaultProfile) {
+    	this.defaultProfile = defaultProfile;
+    }
+
+	public boolean isDefaultProfileImage() {
+    	return defaultProfileImage;
+    }
+
+	public void setDefaultProfileImage(boolean defaultProfileImage) {
+    	this.defaultProfileImage = defaultProfileImage;
+    }
+
+	public boolean isFollowing() {
+    	return following;
+    }
+
+	public void setFollowing(boolean following) {
+    	this.following = following;
+    }
+
+	public boolean isFollowRequestSent() {
+    	return followRequestSent;
+    }
+
+	public void setFollowRequestSent(boolean followRequestSent) {
+    	this.followRequestSent = followRequestSent;
+    }
+
+	public boolean isNotifications() {
+    	return notifications;
+    }
+
+	public void setNotifications(boolean notifications) {
+    	this.notifications = notifications;
+    }
+
+	public UserEntitiesPojo getEntities() {
+    	return entities;
+    }
+
+	public void setEntities(UserEntitiesPojo entities) {
+    	this.entities = entities;
+    }
+
+	public StatusPojo getStatus() {
+    	return status;
+    }
+
+	public void setStatus(StatusPojo status) {
+    	this.status = status;
     }
 
 	@JsonAnySetter

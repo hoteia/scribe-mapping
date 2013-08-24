@@ -4,39 +4,37 @@ import org.codehaus.jackson.annotate.JsonAnySetter;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 
-
 /**
 *
 * <p>
-* <a href="WorkPojo.java.html"><i>View Source</i></a>
+* <a href="UserEntitiesPojo.java.html"><i>View Source</i></a>
 * </p>
 *
 * @author Denis Gosset <a href="http://www.hoteia.com"><i>Hoteia.com</i></a>
 * 
 */
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class WorkPojo extends AbstractJsonPojo {
+public class UserEntitiesPojo extends AbstractJsonPojo {
 
-	protected EmployerPojo employer;
+	protected UrlPojo url;
+	protected DescriptionPojo description;
 	
-	protected PositionPojo position;
-	
-	public EmployerPojo getEmployer() {
-	    return employer;
+	public UrlPojo getUrl() {
+	    return url;
     }
 	
-	public void setEmployer(EmployerPojo employer) {
-	    this.employer = employer;
+	public void setUrl(UrlPojo url) {
+	    this.url = url;
     }
 	
-	public PositionPojo getPosition() {
-	    return position;
+	public DescriptionPojo getDescription() {
+	    return description;
     }
 	
-	public void setPosition(PositionPojo position) {
-	    this.position = position;
+	public void setDescription(DescriptionPojo description) {
+	    this.description = description;
     }
-	
+
 	@JsonAnySetter
 	@Override
 	public void handleUnknown(String key, Object value) {

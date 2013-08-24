@@ -8,7 +8,6 @@ import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 
-
 /**
 *
 * <p>
@@ -31,6 +30,11 @@ public class UserPojo extends AbstractJsonPojo {
 	@JsonProperty("last_name")
 	protected String lastName;
 
+	@JsonProperty("username")
+	protected String username;
+	
+	protected String gender;
+	
 	@JsonProperty("birth_day")
 	protected String birthDay;
 
@@ -40,16 +44,23 @@ public class UserPojo extends AbstractJsonPojo {
 	@JsonProperty("birth_year")
 	protected String birthYear;
 
-	protected List<WorkPojo> work = new ArrayList<WorkPojo>();
+	protected HometownPojo hometown;
+	
+	protected LocationPojo location;
+	
+	protected String email;;
 
-	protected EmailPojo emails = new EmailPojo();
-
+	@JsonProperty("education")
+	protected List<EducationPojo> educations = new ArrayList<EducationPojo>();
+	
 	protected String link;
 	
-	protected String gender;
-	
 	protected String locale;
-	
+
+	protected String timezone;
+
+	protected boolean verified;
+
 	@JsonProperty("updated_time")
 	protected String updatedTime;
 	
@@ -85,6 +96,22 @@ public class UserPojo extends AbstractJsonPojo {
     	this.lastName = lastName;
     }
 	
+	public String getUsername() {
+	    return username;
+    }
+	
+	public void setUsername(String username) {
+	    this.username = username;
+    }
+	
+	public String getGender() {
+    	return gender;
+    }
+
+	public void setGender(String gender) {
+    	this.gender = gender;
+    }
+	
 	public String getBirthDay() {
     	return birthDay;
     }
@@ -109,20 +136,20 @@ public class UserPojo extends AbstractJsonPojo {
     	this.birthYear = birthYear;
     }
 	
-	public List<WorkPojo> getWork() {
-	    return work;
+	public String getEmail() {
+	    return email;
     }
 	
-	public void setWork(List<WorkPojo> work) {
-	    this.work = work;
+	public void setEmail(String email) {
+	    this.email = email;
     }
 	
-	public EmailPojo getEmails() {
-	    return emails;
+	public List<EducationPojo> getEducations() {
+	    return educations;
     }
 	
-	public void setEmails(EmailPojo emails) {
-	    this.emails = emails;
+	public void setEducations(List<EducationPojo> educations) {
+	    this.educations = educations;
     }
 
 	public String getLink() {
@@ -133,20 +160,28 @@ public class UserPojo extends AbstractJsonPojo {
     	this.link = link;
     }
 
-	public String getGender() {
-    	return gender;
-    }
-
-	public void setGender(String gender) {
-    	this.gender = gender;
-    }
-
 	public String getLocale() {
     	return locale;
     }
 
 	public void setLocale(String locale) {
     	this.locale = locale;
+    }
+
+	public String getTimezone() {
+	    return timezone;
+    }
+	
+	public void setTimezone(String timezone) {
+	    this.timezone = timezone;
+    }
+	
+	public boolean isVerified() {
+    	return verified;
+    }
+
+	public void setVerified(boolean verified) {
+    	this.verified = verified;
     }
 
 	public String getUpdatedTime() {

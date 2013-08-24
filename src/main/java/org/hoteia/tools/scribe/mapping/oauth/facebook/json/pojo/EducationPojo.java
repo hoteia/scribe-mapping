@@ -8,23 +8,33 @@ import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
 /**
 *
 * <p>
-* <a href="EmployerPojo.java.html"><i>View Source</i></a>
+* <a href="HometownPojo.java.html"><i>View Source</i></a>
 * </p>
 *
 * @author Denis Gosset <a href="http://www.hoteia.com"><i>Hoteia.com</i></a>
 * 
 */
 @JsonIgnoreProperties(ignoreUnknown=true)
-public class EmployerPojo extends AbstractJsonPojo {
+public class EducationPojo extends AbstractJsonPojo {
 
-	protected String name;
+	protected SchoolPojo school;
 	
-	public String getName() {
-    	return name;
+	protected String type;
+	
+	public SchoolPojo getSchool() {
+	    return school;
     }
-
-	public void setName(String name) {
-    	this.name = name;
+	
+	public void setSchool(SchoolPojo school) {
+	    this.school = school;
+    }
+	
+	public String getType() {
+	    return type;
+    }
+	
+	public void setType(String type) {
+	    this.type = type;
     }
 
 	@JsonAnySetter
