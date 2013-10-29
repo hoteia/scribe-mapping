@@ -9,7 +9,7 @@
  */
 package org.hoteia.tools.scribe.mapping.oauth.common.json.pojo;
 
-import org.codehaus.jackson.annotate.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 
 /**
  *

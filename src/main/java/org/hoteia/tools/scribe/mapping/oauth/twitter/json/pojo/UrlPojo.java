@@ -3,9 +3,10 @@ package org.hoteia.tools.scribe.mapping.oauth.twitter.json.pojo;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.codehaus.jackson.annotate.JsonAnySetter;
-import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.hoteia.tools.scribe.mapping.oauth.common.json.pojo.AbstractJsonPojo;
+
+import com.fasterxml.jackson.annotation.JsonAnySetter;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 /**
 *
