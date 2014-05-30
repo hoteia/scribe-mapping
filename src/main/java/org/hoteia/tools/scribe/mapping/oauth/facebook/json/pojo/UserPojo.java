@@ -49,7 +49,7 @@ public class UserPojo extends AbstractJsonPojo {
 	
 	protected LocationPojo location;
 	
-	protected String email;;
+	protected String email;
 
 	@JsonProperty("education")
 	protected List<EducationPojo> educations = new ArrayList<EducationPojo>();
