@@ -3,7 +3,7 @@
 
 	<groupId>org.hoteia.tools</groupId>
 	<artifactId>scribe-mapping</artifactId>
-	<version>0.2</version>
+	<version>0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<name>scribe-mapping</name>
 	<description>Scribe Mapping Project, extends Scribe-Java Project from GitHub</description>
